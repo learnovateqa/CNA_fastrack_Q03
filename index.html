@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CNA Levels 4 &amp; 5 — Week 3 Quiz</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: { extend: { colors: {
+    brand: { 50:'#fdf2f8',100:'#fce7f3',200:'#fbcfe8',300:'#f9a8d4',400:'#f472b6',500:'#ec4899',600:'#db2777',700:'#be185d' },
+    teal:  { 50:'#effbfa',100:'#ddf1f1',300:'#8ed3d2',500:'#0f7c80',700:'#0b5e61' },
+    ink:   { 900:'#0b5e61',800:'#0f7c80',700:'#334155' } },
+    fontFamily: { display: ['Lora','Georgia','serif'] } } }
+}
+</script>
+<style>
+  body { background:#fdf7fa; }
+  .font-display, h1,h2,h3 { font-family:"Lora",Georgia,serif; }
+  .fade { animation: fade .35s ease; }
+  @keyframes fade { from { opacity:0; transform: translateY(6px);} to {opacity:1; transform:none;} }
+  .pal-btn { transition: all .15s ease; }
+
+  /* screenshot instruction */
+  .shot-wrap { position: relative; }
+  .shot-frame { outline: 4px dashed #E2477E; outline-offset: 7px; border-radius: 1rem; }
+  .shot-tag { position: absolute; top: -14px; left: 14px; background: #E2477E; color: #fff;
+    font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 999px; z-index: 5; white-space: nowrap; }
+  .mini { background: #1F2D3A; color: #fff; border-radius: 10px; padding: 12px 14px; font-size: 11px; line-height: 1.35; }
+  .mini .big { font-size: 22px; font-weight: 800; line-height: 1; }
+  .mini .pct { font-size: 15px; font-weight: 800; color: #5eead4; }
+  .mini .lbl { font-size: 8px; text-transform: uppercase; letter-spacing: .1em; color: #94a3b8; }
+  .mini .val { font-weight: 700; }
+  .mini .pill { display: inline-block; background: #14b8a6; color: #fff; font-size: 9px; font-weight: 800;
+    border-radius: 999px; padding: 3px 8px; }
+  .num { display: inline-flex; width: 18px; height: 18px; border-radius: 50%; background: #E2477E; color: #fff;
+    font-size: 10px; font-weight: 800; align-items: center; justify-content: center; margin-right: 6px; flex: none; }
+  .mini .mk { display: inline-block; outline: 2px solid #E2477E; outline-offset: 2px; border-radius: 4px; }
+  @media print {
+    .no-print { display:none !important; }
+    body { background:#fff; }
+    .print-block { break-inside: avoid; box-shadow:none !important; border:1px solid #cbd5e1 !important; }
+    .print-full { max-width:100% !important; }
+  }
+
+/* drag and drop */
+.chip { cursor: grab; user-select: none; touch-action: manipulation; }
+.chip.sel { outline: 3px solid #ec4899; outline-offset: 2px; }
+.slot.over { background: #fdf2f8 !important; border-color: #ec4899 !important; }
+</style>
+</head>
+<body class="text-slate-800">
+
+<!-- ═════════ HEADER ═════════ -->
+<header class="sticky top-0 z-40 bg-ink-900 text-white shadow-lg no-print border-b-4 border-brand-400">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
+    <svg viewBox="0 0 40 40" width="44" height="44" class="shrink-0" style="width:44px;height:44px" aria-label="CNA Levels 4 and 5" role="img">
+        <g fill="#E2477E">
+          <rect x="13" y="1.5" width="14" height="37" rx="4.5"/>
+          <rect x="1.5" y="13" width="37" height="14" rx="4.5"/>
+        </g>
+        <path fill="#fff" d="M20 29.4l-1.2-1.1c-4.3-3.9-7.1-6.4-7.1-9.5 0-2.5 1.9-4.4 4.4-4.4 1.4 0 2.8.7 3.7 1.7l.2.3.2-.3c.9-1 2.3-1.7 3.7-1.7 2.5 0 4.4 1.9 4.4 4.4 0 3.1-2.8 5.6-7.1 9.5L20 29.4z"/>
+      </svg>
+    <div class="min-w-0 flex-1">
+      <h1 class="font-display font-bold text-base sm:text-lg leading-tight truncate">CNA Levels 4 &amp; 5 — Week 3 Quiz</h1>
+      <p class="text-[11px] sm:text-xs text-teal-100 truncate">The Older Person · Safety · Falls · Restraints · Mental Health &amp; Dementia · Chapters 8 · 9 · 10 · 11 · 29 · 30</p>
+    </div>
+    <span class="hidden md:inline-flex items-center gap-1 text-[10px] font-bold tracking-wider uppercase bg-white/10 text-brand-200 border border-brand-300/50 rounded-full px-3 py-1">
+      <i class="fa-solid fa-shield-heart"></i> WHO standards
+    </span>
+    <div class="hidden sm:block text-right border-l border-white/15 pl-3">
+      <p class="text-xs font-semibold leading-tight">Maria Tongga, BSN, RN, RM</p>
+      <p class="text-[10px] text-brand-200">CNA Instructor</p>
+    </div>
+  </div>
+</header>
+
+<!-- ═════════ SCREEN 0 · TIME LOCK ═════════ -->
+<section id="screen-lock" class="hidden fade">
+  <div class="max-w-xl mx-auto px-4 py-16 text-center">
+    <div class="bg-ink-900 text-white rounded-2xl shadow-xl p-10">
+      <div class="w-20 h-20 rounded-full bg-brand-500/15 border border-brand-500/40 grid place-items-center mx-auto mb-6">
+        <i class="fa-solid fa-lock text-3xl text-brand-400"></i>
+      </div>
+      <h2 class="font-display text-2xl font-bold mb-2">This exam is locked</h2>
+      <p class="text-teal-100 text-sm mb-6">It opens on <span id="lock-when" class="text-brand-300 font-semibold"></span> (Doha time).</p>
+      <div class="grid grid-cols-3 gap-3 max-w-sm mx-auto">
+        <div class="bg-white/5 rounded-xl py-4"><p id="cd-h" class="text-3xl font-bold">00</p><p class="text-[10px] uppercase tracking-widest text-slate-400">Hours</p></div>
+        <div class="bg-white/5 rounded-xl py-4"><p id="cd-m" class="text-3xl font-bold">00</p><p class="text-[10px] uppercase tracking-widest text-slate-400">Minutes</p></div>
+        <div class="bg-white/5 rounded-xl py-4"><p id="cd-s" class="text-3xl font-bold">00</p><p class="text-[10px] uppercase tracking-widest text-slate-400">Seconds</p></div>
+      </div>
+      <p class="text-xs text-slate-400 mt-6">The page unlocks by itself. You do not need to reload.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ SCREEN 1 · REGISTRATION + REVIEWER ═════════ -->
+<section id="screen-home" class="hidden fade">
+  <div class="max-w-6xl mx-auto px-4 py-8 grid lg:grid-cols-3 gap-6">
+
+    <!-- registration -->
+    <aside class="lg:col-span-1 lg:sticky lg:top-24 self-start">
+      <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden">
+        <div class="bg-ink-900 text-white px-5 py-4">
+          <h2 class="font-display text-lg font-bold">Examinee registration</h2>
+          <p class="text-xs text-teal-100">Fill this in to start the exam.</p>
+        </div>
+        <div class="p-5 space-y-4">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-ink-700 mb-1">Full name</label>
+            <input id="reg-name" type="text" autocomplete="name" placeholder="e.g. Fatima Al Sayed"
+              class="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-sm focus:ring-2 focus:ring-brand-400 focus:border-brand-400 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-ink-700 mb-1">Email</label>
+            <input id="reg-email" type="email" autocomplete="email" placeholder="you@email.com"
+              class="w-full rounded-lg border border-slate-300 px-3 py-2.5 text-sm focus:ring-2 focus:ring-brand-400 focus:border-brand-400 outline-none">
+            <p id="reg-msg" class="text-xs text-brand-600 mt-1 hidden"></p>
+          </div>
+          <dl class="grid grid-cols-3 gap-2 text-center pt-1">
+            <div class="bg-slate-50 rounded-lg py-2"><dt class="text-[10px] uppercase text-slate-500">Items</dt><dd class="font-bold text-ink-900">100</dd></div>
+            <div class="bg-slate-50 rounded-lg py-2"><dt class="text-[10px] uppercase text-slate-500">Minutes</dt><dd class="font-bold text-ink-900">150</dd></div>
+            <div class="bg-slate-50 rounded-lg py-2"><dt class="text-[10px] uppercase text-slate-500">To pass</dt><dd class="font-bold text-ink-900">75%</dd></div>
+          </dl>
+          <div id="warn-box" class="bg-brand-50 border-2 border-brand-500 rounded-xl p-4">
+            <p class="text-base font-bold text-brand-700 mb-2 leading-snug">
+              <span style="font-size:20px;line-height:1">⚠️</span> READ THIS BEFORE YOU PRESS START <span style="font-size:20px;line-height:1">⚠️</span></p>
+            <ul class="space-y-1.5 text-[13px] text-ink-900 leading-snug">
+              <li><b>100 items · 150 minutes · 75% to pass.</b></li>
+              <li><b>5 attempts only.</b> After the 5th the quiz locks.</li>
+              <li><b>Pressing Start uses one attempt</b> — even if you close the page.</li>
+              <li><b>The timer does not stop</b> once you start.</li>
+              <li>When you finish: <b>screenshot your score</b> and turn it in on Google Classroom, or send it to Ms. Maria.</li>
+              <li>Only press Start when you have <b>150 quiet minutes</b>.</li>
+            </ul>
+            <p id="attempts-left" class="mt-3 text-sm font-bold text-ink-900"></p>
+          </div>
+          <button id="btn-start" disabled
+            class="w-full rounded-lg bg-brand-500 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-bold py-3 text-sm hover:bg-brand-600 transition">
+            <i class="fa-solid fa-play mr-1"></i> Start exam
+          </button>
+          <p class="text-[11px] text-slate-500 leading-relaxed">
+            The skills evaluation is taken separately with your instructor. Both parts must be passed.
+          </p>
+        </div>
+      </div>
+      <div class="mt-4 bg-teal-50 border border-teal-300 rounded-2xl p-4">
+        <p class="text-xs font-bold uppercase tracking-wider text-teal-700 mb-1"><i class="fa-solid fa-star mr-1"></i> The Golden Rule</p>
+        <p class="text-sm text-ink-800 font-semibold">Observe · Assist · Document · Report</p>
+        <p class="text-xs text-ink-700 mt-1">A nursing assistant reports to the supervising nurse. A CNA does not diagnose, prescribe, give medications, take doctor's orders, or change the care plan.</p>
+      </div>
+    </aside>
+
+    <!-- reviewer -->
+    <div class="lg:col-span-2">
+      <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-5 mb-4">
+        <h2 class="font-display text-xl font-bold text-ink-900">Study reviewer</h2>
+        <p class="text-sm text-slate-600">Open each module and review before you start. Everything in the exam comes from these six modules.</p>
+      </div>
+      <div id="reviewer" class="space-y-3"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ SCREEN 2 · EXAM ═════════ -->
+<section id="screen-exam" class="hidden fade">
+  <div class="sticky top-[60px] sm:top-[64px] z-30 bg-white border-b border-slate-200 shadow-sm no-print">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3">
+      <div id="avatar" class="w-9 h-9 rounded-full bg-teal-500 text-white grid place-items-center text-xs font-bold shrink-0">--</div>
+      <div class="min-w-0 flex-1">
+        <p id="exam-name" class="text-xs font-bold text-ink-900 truncate">Candidate</p>
+        <div class="h-2 bg-slate-200 rounded-full mt-1 overflow-hidden">
+          <div id="bar" class="h-full bg-brand-500 rounded-full transition-all" style="width:0%"></div>
+        </div>
+      </div>
+      <div class="text-right shrink-0">
+        <p id="clock" class="font-mono font-bold text-ink-900 text-lg leading-none">150:00</p>
+        <p id="progress-txt" class="text-[10px] text-slate-500">0 of 100 saved</p>
+      </div>
+      <button id="btn-submit" class="shrink-0 rounded-lg bg-ink-900 hover:bg-ink-800 text-white text-xs font-bold px-3 py-2.5">
+        <i class="fa-solid fa-paper-plane mr-1"></i> Submit
+      </button>
+    </div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-4 py-6 grid lg:grid-cols-3 gap-6">
+    <div class="lg:col-span-2">
+      <div id="qcard" class="bg-white rounded-2xl shadow-md border border-slate-200 p-6 min-h-[340px]"></div>
+      <div class="flex items-center justify-between mt-4">
+        <button id="btn-prev" class="rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold hover:bg-slate-50">
+          <i class="fa-solid fa-arrow-left mr-1"></i> Back
+        </button>
+        <button id="btn-next" class="rounded-lg bg-teal-500 hover:bg-teal-700 text-white px-5 py-2.5 text-sm font-bold">
+          Next <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </div>
+    <aside class="lg:sticky lg:top-40 self-start">
+      <div class="bg-white rounded-2xl shadow-md border border-slate-200 p-4">
+        <p class="text-xs font-bold uppercase tracking-wider text-ink-700 mb-3">Question palette</p>
+        <div id="palette"></div>
+        <div class="mt-4 space-y-1.5 text-[11px] text-slate-600">
+          <p><span class="inline-block w-3 h-3 rounded bg-brand-500 align-middle mr-2"></span>Active</p>
+          <p><span class="inline-block w-3 h-3 rounded bg-teal-500 align-middle mr-2"></span>Saved</p>
+          <p><span class="inline-block w-3 h-3 rounded bg-slate-200 border border-slate-300 align-middle mr-2"></span>Pending</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ═════════ SCREEN 3 · SCORECARD ═════════ -->
+<section id="screen-result" class="hidden fade">
+  <div class="max-w-4xl mx-auto px-4 py-8 print-full">
+    <div class="shot-wrap mb-8">
+      <span class="shot-tag no-print"><i class="fa-solid fa-camera"></i> &nbsp;Screenshot everything inside this line</span>
+      <div id="score-card" class="bg-ink-900 text-white rounded-2xl shadow-xl p-8 print-block shot-frame"></div>
+    </div>
+    <div class="bg-brand-50 border-2 border-brand-400 rounded-2xl p-6 mb-6 print-block">
+      <h3 class="font-display text-2xl font-bold text-brand-700 mb-1">
+        <i class="fa-solid fa-camera mr-2"></i>Take a screenshot of your score NOW</h3>
+      <p class="text-base text-ink-900 font-semibold mb-1">This page does not save. If you close it without a screenshot, your score is gone.</p>
+      <p class="text-sm text-ink-800 mb-5">Capture everything inside the pink dashed line above, then <b>turn it in on Google Classroom</b> or <b>send it to Ms. Maria</b>.</p>
+
+      <div class="grid sm:grid-cols-2 gap-5 items-start">
+
+        <!-- worked sample -->
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">A good screenshot looks like this</p>
+          <div class="mini">
+            <div class="flex items-start gap-4">
+              <div>
+                <p class="lbl">Raw score</p>
+                <p class="big mk">82<span style="font-size:13px;color:#94a3b8">/100</span></p>
+                <p class="pct mk" style="margin-top:3px">82%</p>
+              </div>
+              <div class="flex-1">
+                <span class="pill mk">WRITTEN EXAM: PASS</span>
+                <div class="grid grid-cols-2 gap-x-3 gap-y-1 mt-2">
+                  <div><p class="lbl">Candidate</p><p class="val mk">Fatima Al Sayed</p></div>
+                  <div><p class="lbl">Email</p><p class="val">fatima@email.com</p></div>
+                  <div><p class="lbl">Time used</p><p class="val">118 min</p></div>
+                  <div><p class="lbl">Submitted</p><p class="val mk">14 Oct 2026, 19:40</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-[11px] text-slate-500 mt-2 italic">Example only — this is not your result.</p>
+        </div>
+
+        <!-- what it must show -->
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-2">It must show all four of these</p>
+          <ul class="space-y-2 text-sm text-ink-900">
+            <li class="flex items-start"><span class="num">1</span><span><b>Your full name</b> — a score with no name does not count</span></li>
+            <li class="flex items-start"><span class="num">2</span><span><b>Your score</b> — for example 82/100</span></li>
+            <li class="flex items-start"><span class="num">3</span><span><b>Your percentage and PASS or FAIL</b></span></li>
+            <li class="flex items-start"><span class="num">4</span><span><b>The date and time</b> you submitted</span></li>
+          </ul>
+          <div class="bg-white border border-brand-200 rounded-xl p-3 mt-4">
+            <p class="text-xs font-bold text-ink-900 mb-1">How to take a screenshot</p>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              <b>Android:</b> power + volume DOWN together<br>
+              <b>iPhone:</b> side button + volume UP (older models: side + home)<br>
+              <b>Windows:</b> Windows key + Shift + S<br>
+              <b>Mac:</b> Cmd + Shift + 4</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white border-2 border-teal-500 rounded-xl px-4 py-4 mt-5">
+        <p class="text-sm font-bold uppercase tracking-wider text-teal-700 mb-2">
+          <i class="fa-solid fa-paper-plane mr-1"></i>Last step — do ONE of these</p>
+        <div class="grid sm:grid-cols-2 gap-3">
+          <div class="flex items-start gap-3 bg-teal-50 rounded-lg px-3 py-3">
+            <span class="num" style="background:#0F7C80">1</span>
+            <p class="text-sm text-ink-900"><b>Turn it in on Google Classroom</b><br>
+              <span class="text-slate-600">Open the Week 3 Quiz assignment, attach your screenshot, and press <b>Turn in</b>.</span></p>
+          </div>
+          <div class="flex items-start gap-3 bg-teal-50 rounded-lg px-3 py-3">
+            <span class="num" style="background:#0F7C80">2</span>
+            <p class="text-sm text-ink-900"><b>Or send the screenshot to Ms. Maria</b><br>
+              <span class="text-slate-600">Send it directly to your instructor.</span></p>
+          </div>
+        </div>
+        <p class="text-xs text-slate-600 mt-3">You only need to do one of the two. You are not finished until your screenshot has been turned in or sent.</p>
+      </div>
+      <div class="bg-brand-500 text-white rounded-xl px-4 py-3 mt-3">
+        <p class="text-sm font-bold"><i class="fa-solid fa-triangle-exclamation mr-1"></i>
+          Do not crop out your name or the date. A screenshot showing only the percentage cannot be marked.</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap gap-3 mb-6 no-print">
+      <button onclick="window.print()" class="rounded-lg bg-white border border-slate-300 px-4 py-2.5 text-sm font-semibold hover:bg-slate-50"><i class="fa-solid fa-print mr-1"></i> Print / save as PDF</button>
+      <button id="btn-retake" class="rounded-lg bg-brand-500 hover:bg-brand-600 text-white px-4 py-2.5 text-sm font-bold"><i class="fa-solid fa-rotate-right mr-1"></i> Take it again</button>
+      <span id="mail-status" class="text-xs text-slate-500 self-center"></span>
+    </div>
+    <div id="review" class="space-y-3"></div>
+  </div>
+</section>
+
+<footer class="no-print text-center text-xs text-slate-500 py-8">
+  CNA Levels 4 &amp; 5 · Week 3 · Prepared by Maria Tongga, BSN, RN, RM · Based on WHO standards and facility policy
+</footer>
+
+<script>
+/* ══════════════════════ CONFIG ══════════════════════ */
+const CONFIG = {
+  title: "CNA Levels 4 & 5 — Week 3 Quiz (Ch 8 · 9 · 10 · 11 · 29 · 30)",
+  instructor: "Maria Tongga, BSN, RN, RM",
+  // To schedule the exam, put a future Doha time here, e.g. "2026-09-25T16:30:00+03:00"
+  releaseISO: "2026-01-01T08:00:00+03:00",
+  email: "mariaeftongga@gmail.com",
+  minutes: 150,
+  maxAttempts: 5,   // hard limit. 0 would mean unlimited.
+  passPct: 75
+};
+
+/* ══════════════════════ REVIEWER ══════════════════════ */
+const REVIEWER = [
+ { ch:"Reporting", title:"SBAR — how to give a report", points:[
+   "<b>S — Situation:</b> who you are, who the person is, where they are, and what is happening NOW. One sentence.",
+   "<b>B — Background:</b> what the nurse needs to know from before — diagnosis, operation, allergy, how much help they normally need.",
+   "<b>A — Assessment:</b> what YOU saw and measured — temperature, pulse, breathing, oxygen, skin, behaviour, intake.",
+   "<b>R — Recommendation:</b> what you are asking for. \u201cCan you come and see her now?\u201d",
+   "<b>The rule that matters:</b> the A is what you observed, never a diagnosis. \u201cHer pulse is 112\u201d is yours to say; \u201cshe has an infection\u201d is not."]},
+ { ch:"Chapter 8", title:"The older person", points:[
+   "<b>Normal ageing</b> is slow, expected and the same on both sides: thinner drier skin, less muscle, weaker bones, stiffer joints, slower digestion, smaller bladder, more light needed, high sounds harder to hear.",
+   "<b>NOT ageing — report it:</b> new confusion, a fall, new weakness on one side, chest pain, breathlessness at rest, not eating or drinking, pain, broken or red skin, new loss of bladder or bowel control.",
+   "<b>What the changes mean:</b> handle limbs gently · allow more time · more light and no clutter · face the person and speak lower, not louder · offer the toilet every two hours · offer fluids often.",
+   "<b>Dignity:</b> use the name they choose, speak to the adult, offer choices, close the curtain, do not rush, knock and respect a closed door.",
+   "<b>The losses nobody sees:</b> work and role, home and possessions, husbands, wives and friends, independence and money."]},
+ { ch:"Chapter 9", title:"Safety", points:[
+   "<b>Identify the person every time</b> with <b>two identifiers</b> — name and date of birth, or the ID band. <b>Ask</b> \u201cWhat is your name?\u201d — never \u201cAre you Mrs. Ahmed?\u201d A confused person says yes to any name. Never use the room number alone.",
+   "<b>Most at risk:</b> the very young and very old, the confused or drowsy, poor sight or hearing, trouble moving, certain medicines, and anyone who cannot communicate.",
+   "<b>Preventing injuries:</b> check bath water · lock away cleaning products · correct diet texture and sit upright to eat · check bed rails and mattress gaps for <b>entrapment</b> · no frayed cords · lock wheels and lift footplates.",
+   "<b>RACE</b> in a fire: Rescue · Alarm · Contain · Extinguish or Evacuate. <b>PASS</b> for an extinguisher: Pull · Aim at the base · Squeeze · Sweep.",
+   "<b>Oxygen feeds fire:</b> no smoking, candles, electric razors or aerosols where oxygen is in use.",
+   "<b>Incident report:</b> make the person safe, tell the nurse the same shift, write facts only with the time. Report your own injuries, needle-sticks, broken equipment and near-misses. Hiding a mistake turns an error into negligence."]},
+ { ch:"Chapter 10", title:"Preventing falls", points:[
+   "<b>Two most common times:</b> going to the bathroom at night, and the first minutes after getting out of bed.",
+   "<b>The person\u2019s risks</b> (hard to change today): weakness, poor balance, poor sight, dizziness on standing, confusion, sleeping or water or blood pressure tablets, urgent toileting.",
+   "<b>The room\u2019s risks</b> (yours to fix in two minutes): bed too high, wheels unlocked, call light out of reach, wet floor, clutter, poor light, loose slippers or socks alone.",
+   "<b>Bed rails are not a fall prevention tool.</b> Raised rails the person did not choose are a <b>restraint</b>. A confused person climbs over and falls further, and can be trapped between rail and mattress.",
+   "<b>If someone starts to fall:</b> never catch them. Move behind or beside with feet apart → hold the gait belt or waist and bring them towards you → let them slide down your leg to the floor, protecting the head → stay with them, do not move them, call the nurse.",
+   "<b>After a fall:</b> every fall is reported, injury or not. Do not lift them up — the nurse checks first. If you did not see it, write \u201cfound on the floor beside the bed at 02:10\u201d, never \u201cthe resident fell\u201d."]},
+ { ch:"Chapter 11", title:"Restraints", points:[
+   "<b>A restraint</b> is anything that limits movement, or access to your own body, that the person cannot remove easily.",
+   "<b>Physical:</b> belts, vests, mittens, a lap tray, both bed rails up, a chair they cannot get out of. <b>Chemical:</b> medicine given to control behaviour rather than treat illness. <b>Environmental:</b> a locked door or chair, or the walking frame moved out of reach.",
+   "<b>They do NOT prevent falls</b> — they change the injury. Harms: strangling and suffocation, worse fall injuries, pressure injuries, contractures, incontinence, fear and worse agitation.",
+   "<b>The rules:</b> a doctor\u2019s order is needed · never for staff convenience or punishment · alternatives must be tried first and written down · least restrictive type, shortest time. A restraint without an order is <b>false imprisonment</b>.",
+   "<b>Alternatives first:</b> ask why (pain, toilet, hunger, thirst, boredom, fear, temperature) · answer the call light fast · toilet every two hours · company and activity · lower bed, chair alarm, familiar things · supervised walking.",
+   "<b>If one is ordered:</b> right type and size, <b>quick-release knot</b>. Check every <b>15 minutes</b>. Release every <b>2 hours</b> for at least <b>10 minutes</b>. Record everything. Report at once: trouble breathing, cold or blue hands, pain, red or broken skin, or sliding down inside the restraint."]},
+ { ch:"Chapter 29", title:"Mental health", points:[
+   "<b>Mental illness</b> is a treatable change in thinking, mood or behaviour that disturbs daily life. It is an illness, not weakness.",
+   "<b>Anxiety:</b> restless, worried, fast breathing and pulse, sweating, repeated questions. <b>Depression:</b> sad, flat, tearful, no interest, not eating, sleeping badly or all day, says they are a burden.",
+   "<b>Psychosis:</b> hearing or seeing things others do not (<b>hallucination</b>), fixed false beliefs (<b>delusion</b>), speech hard to follow.",
+   "<b>You CAN:</b> notice and report changes, listen without judging and report exact words, keep routine and the basics going, keep everyone safe.",
+   "<b>You CANNOT:</b> diagnose, tell the person or family what you think they have, give or adjust medicines, counsel, argue with a belief or pretend it is real, or promise secrecy.",
+   "<b>Self-harm talk:</b> stay with them · do not promise secrecy · tell the nurse immediately. For a hallucination: \u201cI do not hear it, but I can see it frightens you. I will stay with you.\u201d"]},
+ { ch:"Chapter 30", title:"Confusion and dementia", points:[
+   "<b>Delirium:</b> starts suddenly over hours or days, comes and goes, caused by infection, dehydration, medicine, pain, constipation or low oxygen. <b>It gets better when the cause is treated — report it the same shift.</b>",
+   "<b>Dementia:</b> starts slowly over months or years, stays and slowly worsens, caused by damage to the brain. Good care makes life much better.",
+   "<b>In an older person, new confusion is often the FIRST sign of a urine or chest infection — before any fever.</b> Never \u201cjust her age\u201d and never \u201cshe is like that\u201d.",
+   "<b>Types:</b> Alzheimer disease (most common, slow, recent memory first) · vascular (small strokes, changes in steps) · Lewy body (visual hallucinations, stiffness, falls, varying alertness) · frontotemporal (personality and behaviour first).",
+   "<b>Recent memory goes first, old memory last</b> — which is why she may not know your name but can describe her wedding.",
+   "<b>Approach:</b> come from the front · eye level · say who you are every time · one short instruction, then wait · never test, correct or ask \u201cDo you remember me?\u201d",
+   "<b>Behaviour is communication:</b> wandering is looking for something · sundowning is late-afternoon confusion · shouting or hitting is usually pain, fear or being rushed · repeated questions mean anxiety, not difficulty.",
+   "<b>\u201cI want to go home\u201d:</b> answer the feeling, not the fact. \u201cTell me about your home\u201d, then change the activity. This is not lying."]}
+];
+
+/* ══════════════════════ EXAM PARTS ══════════════════════ */
+const PARTS = [
+  { n:1, name:"Part 1 · Identification", info:"Write the correct word or term. Spelling may be slightly different; capital letters do not matter." },
+  { n:2, name:"Part 2 · True or False", info:"Choose True or False." },
+  { n:3, name:"Part 3 · Multiple Choice", info:"Choose the best answer." },
+  { n:4, name:"Part 4 · Case Study", info:"Read each case, then answer the questions about it." },
+  { n:5, name:"Part 5 · Drag and Drop", info:"Drag each card into the correct box — or tap a card, then tap the box. Tap a card in a box to send it back. All boxes must be filled." }
+];
+
+/* ══════════════════════ QUESTION BANK (100) ══════════════════════ */
+const TF = ["True","False"];
+const QUESTIONS = [
+ {p:1, d:"SBAR", t:"concept", q:"The four-part order for giving a report to the nurse.",
+  a:["sbar"], e:"SBAR: Situation, Background, Assessment, Recommendation."},
+ {p:1, d:"SBAR", t:"concept", q:"In SBAR, the part where you give what you saw and measured.",
+  a:["assessment","a","the a"], e:"The Assessment. It is your observations and measurements — never a diagnosis."},
+ {p:1, d:"Ch 9 · Safety", t:"concept", q:"The two pieces of information used to confirm who a person is.",
+  a:["two identifiers","identifiers","name and date of birth"], e:"Two identifiers — name and date of birth, or the ID band."},
+ {p:1, d:"Ch 9 · Safety", t:"concept", q:"The written factual record of an accident, injury or near-miss.",
+  a:["incident report","accident report"], e:"The incident report. Facts only, with the time — no opinions and no blame."},
+ {p:1, d:"Ch 9 · Safety", t:"concept", q:"Something that almost caused harm but did not.",
+  a:["near miss","near-miss","nearmiss"], e:"A near-miss. It is reported like an accident, because next time it may not be a miss."},
+ {p:1, d:"Ch 9 · Fire", t:"concept", q:"The four letters that tell you what to do in a fire.",
+  a:["race"], e:"RACE: Rescue, Alarm, Contain, Extinguish or Evacuate."},
+ {p:1, d:"Ch 9 · Fire", t:"concept", q:"The four letters for using a fire extinguisher.",
+  a:["pass"], e:"PASS: Pull, Aim at the base, Squeeze, Sweep."},
+ {p:1, d:"Ch 9 · Safety", t:"concept", q:"Being caught between the bed rail and the mattress.",
+  a:["entrapment","trapped"], e:"Entrapment. Check rails and mattress gaps — people have died this way."},
+ {p:1, d:"Ch 10 · Falls", t:"concept", q:"The belt worn around the waist that you hold to steady or move a person.",
+  a:["gait belt","transfer belt"], e:"A gait belt, also called a transfer belt."},
+ {p:1, d:"Ch 11 · Restraints", t:"concept", q:"Anything that limits movement, or access to one's own body, that the person cannot remove.",
+  a:["restraint","a restraint"], e:"A restraint. It can be physical, chemical or environmental."},
+ {p:1, d:"Ch 11 · Restraints", t:"concept", q:"A medicine given to control behaviour rather than to treat an illness.",
+  a:["chemical restraint","chemical"], e:"A chemical restraint."},
+ {p:1, d:"Ch 11 · Restraints", t:"concept", q:"Keeping a person somewhere, or restraining them, without the right to do so.",
+  a:["false imprisonment"], e:"False imprisonment. A restraint with no order and no care plan is exactly this."},
+ {p:1, d:"Ch 11 · Restraints", t:"concept", q:"The only kind of knot used to secure a restraint.",
+  a:["quick release","quick-release","quick release knot","quick-release knot"], e:"A quick-release knot, so it can be undone instantly in an emergency."},
+ {p:1, d:"Ch 11 · Restraints", t:"concept", q:"A muscle that has shortened permanently because the joint was not moved.",
+  a:["contracture","contractures"], e:"A contracture. It is one reason restrained people are harmed."},
+ {p:1, d:"Ch 29 · Mental health", t:"concept", q:"Seeing, hearing or feeling something that is not there.",
+  a:["hallucination","hallucinations"], e:"A hallucination. Do not argue with it and do not pretend it is real."},
+ {p:1, d:"Ch 29 · Mental health", t:"concept", q:"A fixed false belief that does not change even when the person is shown it is not true.",
+  a:["delusion","delusions"], e:"A delusion."},
+ {p:1, d:"Ch 30 · Dementia", t:"concept", q:"Sudden confusion caused by a physical problem, which gets better when the cause is treated.",
+  a:["delirium"], e:"Delirium. Report it the same shift — it is an emergency."},
+ {p:1, d:"Ch 30 · Dementia", t:"concept", q:"Permanent damage to the brain affecting memory, thinking, language and judgement.",
+  a:["dementia"], e:"Dementia."},
+ {p:1, d:"Ch 30 · Dementia", t:"concept", q:"The most common type of dementia, which starts with loss of recent memory.",
+  a:["alzheimer","alzheimers","alzheimer disease","alzheimer's disease","alzheimers disease"], e:"Alzheimer disease."},
+ {p:1, d:"Ch 30 · Dementia", t:"concept", q:"More confusion and restlessness in the late afternoon and evening.",
+  a:["sundowning","sun downing"], e:"Sundowning. The person is tired and hungry, the light is fading and the ward is noisy."},
+ {p:2, d:"SBAR", t:"tf", q:"In the Assessment part of SBAR you should say what you think the illness is.", o:TF, a:1,
+  e:"False. The A is what you saw and measured. Naming an illness is outside the CNA role."},
+ {p:2, d:"SBAR", t:"tf", q:"A good SBAR report ends by saying clearly what you are asking the nurse to do.", o:TF, a:0,
+  e:"True. That is the R — Recommendation."},
+ {p:2, d:"Ch 8 · Ageing", t:"tf", q:"New confusion is a normal part of growing old.", o:TF, a:1,
+  e:"False. Slower thinking can be normal; new confusion is not. Report it."},
+ {p:2, d:"Ch 8 · Ageing", t:"tf", q:"You should speak louder to an older person with hearing loss.", o:TF, a:1,
+  e:"False. Face them and speak clearly and lower, not louder. Shouting distorts the sound."},
+ {p:2, d:"Ch 8 · Ageing", t:"tf", q:"Thinner, drier skin is a normal change of ageing.", o:TF, a:0,
+  e:"True. Handle limbs gently and expect bruises from small knocks."},
+ {p:2, d:"Ch 9 · Safety", t:"tf", q:"Asking “Are you Mrs. Ahmed?” is an acceptable way to identify a person.", o:TF, a:1,
+  e:"False. A confused person will say yes to any name. Ask “What is your name?” and use two identifiers."},
+ {p:2, d:"Ch 9 · Safety", t:"tf", q:"A near-miss does not need to be reported because nobody was hurt.", o:TF, a:1,
+  e:"False. Near-misses are reported so the cause can be fixed before someone is hurt."},
+ {p:2, d:"Ch 9 · Fire", t:"tf", q:"You aim a fire extinguisher at the top of the flames.", o:TF, a:1,
+  e:"False. Aim at the base of the fire."},
+ {p:2, d:"Ch 9 · Safety", t:"tf", q:"Electric razors are safe to use in a room where oxygen is running.", o:TF, a:1,
+  e:"False. Oxygen feeds fire. No smoking, candles, razors or aerosols."},
+ {p:2, d:"Ch 10 · Falls", t:"tf", q:"Most falls in care homes happen at unpredictable times.", o:TF, a:1,
+  e:"False. Most are predictable — going to the bathroom at night, and the first minutes after getting out of bed."},
+ {p:2, d:"Ch 10 · Falls", t:"tf", q:"You should try to catch a person who is falling.", o:TF, a:1,
+  e:"False. You will both be injured. Ease them to the floor and protect the head."},
+ {p:2, d:"Ch 10 · Falls", t:"tf", q:"Every fall must be reported, even when there is no injury.", o:TF, a:0,
+  e:"True. And the person is not lifted up until the nurse has checked them."},
+ {p:2, d:"Ch 10 · Falls", t:"tf", q:"Raising both bed rails to stop a person getting up is a restraint.", o:TF, a:0,
+  e:"True. It needs an order and a care plan, whatever you call it."},
+ {p:2, d:"Ch 11 · Restraints", t:"tf", q:"Restraints prevent falls.", o:TF, a:1,
+  e:"False. They change the kind of injury. A person who climbs over a restraint falls from higher."},
+ {p:2, d:"Ch 11 · Restraints", t:"tf", q:"A restraint may be used when the unit is short of staff.", o:TF, a:1,
+  e:"False. Never for staff convenience, and never as punishment."},
+ {p:2, d:"Ch 11 · Restraints", t:"tf", q:"A person in a restraint is checked every 15 minutes.", o:TF, a:0,
+  e:"True. Look every 15 minutes; release every 2 hours for at least 10 minutes."},
+ {p:2, d:"Ch 29 · Mental health", t:"tf", q:"You should argue with a person who is having a hallucination until they accept it is not real.", o:TF, a:1,
+  e:"False. Do not argue and do not pretend. “I do not hear it, but I can see it frightens you.”"},
+ {p:2, d:"Ch 29 · Mental health", t:"tf", q:"If a resident says they want to die, you should promise not to tell anyone.", o:TF, a:1,
+  e:"False. Never promise secrecy. Stay with them and tell the nurse immediately."},
+ {p:2, d:"Ch 30 · Dementia", t:"tf", q:"Delirium usually gets better when the cause is treated.", o:TF, a:0,
+  e:"True. That is the difference from dementia, which is permanent."},
+ {p:2, d:"Ch 30 · Dementia", t:"tf", q:"A person with dementia usually loses old memories before recent ones.", o:TF, a:1,
+  e:"False. Recent memory goes first and old memory last."},
+ {p:3, d:"SBAR", t:"mc", q:"Which sentence belongs in the B of SBAR?",
+  o:["“Her pulse is 112.”","“She had a stroke two years ago and needs one assist.”","“Can you come now?”","“Mrs. Layla in Room 6 has fallen.”"], a:1,
+  e:"Background is the history the nurse needs to make sense of the situation."},
+ {p:3, d:"SBAR", t:"mc", q:"Which is the BEST R?",
+  o:["“I thought you should know.”","“She probably needs antibiotics.”","“Can you come and see her now?”","“I will write it in the notes.”"], a:2,
+  e:"The R says clearly what you want to happen, and when."},
+ {p:3, d:"SBAR", t:"mc", q:"A student reports: “Nurse, Mr. Idris has chest pain — I think it is a heart attack.” What is wrong?",
+  o:["Nothing — it is clear and short","He named a diagnosis, which is not the CNA role","He should not have used the person's name","He should have written it instead"], a:1,
+  e:"Report what you saw and measured. Naming the illness is for the nurse or doctor."},
+ {p:3, d:"Ch 8 · Ageing", t:"mc", q:"Which of these is a NORMAL change of ageing?",
+  o:["Sudden weakness on one side","A smaller bladder and slower digestion","Blood in the urine","Breathlessness sitting in a chair"], a:1,
+  e:"The other three are new or one-sided, and must be reported."},
+ {p:3, d:"Ch 8 · Ageing", t:"mc", q:"A resident's skin tears easily. What do you change about your care?",
+  o:["Use more tape to hold dressings","Handle limbs gently and remove tape slowly","Wash with hotter water","Rub the skin briskly to improve circulation"], a:1,
+  e:"Thin skin tears. Gentle handling, slow tape removal and moisturising protect it."},
+ {p:3, d:"Ch 8 · Ageing", t:"mc", q:"Which is the best way to speak to an older person with hearing loss?",
+  o:["Shout from the doorway","Face them and speak clearly in a lower voice","Speak quickly so it is less tiring","Write everything down instead"], a:1,
+  e:"Facing them lets them see your mouth. Lower, not louder — high sounds are lost first."},
+ {p:3, d:"Ch 8 · Dignity", t:"mc", q:"Which of these respects dignity?",
+  o:["Calling her “granny” because it is friendly","Choosing her clothes to save time","Asking which of two blouses she would like","Talking to your colleague over her while you wash her"], a:2,
+  e:"Offering choice is the last independence many residents keep."},
+ {p:3, d:"Ch 9 · Safety", t:"mc", q:"You are giving a meal tray marked “diabetic diet”. What must you do first?",
+  o:["Put it on the table nearest the door","Check two identifiers against the tray card","Ask the family which bed is hers","Check the room number only"], a:1,
+  e:"Two identifiers, every time — for care, for food, and for anything you take or give."},
+ {p:3, d:"Ch 9 · Safety", t:"mc", q:"Which person is at HIGHEST risk of an accident?",
+  o:["A 40-year-old with a broken finger","An alert 70-year-old who walks independently","An 85-year-old who is drowsy from new medicine and has poor sight","A 60-year-old visitor"], a:2,
+  e:"Age plus drowsiness plus poor sight — several risk factors together."},
+ {p:3, d:"Ch 9 · Safety", t:"mc", q:"You find a frayed electrical cord on a hoist. What do you do?",
+  o:["Use it carefully until the end of the shift","Wrap it in tape and carry on","Take it out of use, label it and report it","Leave it for the next shift to deal with"], a:2,
+  e:"Broken equipment is taken out of use and reported — not used carefully."},
+ {p:3, d:"Ch 9 · Fire", t:"mc", q:"What does the C in RACE stand for?",
+  o:["Call the family","Contain — close doors and windows","Check the corridor","Carry the extinguisher"], a:1,
+  e:"Rescue, Alarm, Contain, Extinguish or Evacuate."},
+ {p:3, d:"Ch 9 · Safety", t:"mc", q:"Which action prevents choking?",
+  o:["Letting the person eat lying flat","Giving the correct diet texture and sitting them upright","Leaving a person at risk alone with food to save time","Giving larger mouthfuls to finish faster"], a:1,
+  e:"Correct texture, upright position, and supervision for anyone at risk."},
+ {p:3, d:"Ch 9 · Reporting", t:"mc", q:"Which is written correctly in an incident report?",
+  o:["“Resident was being difficult and fell.”","“Resident probably tripped on the rug.”","“Found sitting on the floor beside the bed at 02:10. Nurse informed 02:12.”","“Resident fell because the night staff were slow.”"], a:2,
+  e:"Facts, with the time. No opinions, no guesses, no blame."},
+ {p:3, d:"Ch 10 · Falls", t:"mc", q:"When do most falls happen in a care home?",
+  o:["During meals","Going to the bathroom at night, and just after getting out of bed","During visiting hours","While being washed"], a:1,
+  e:"Which is why toileting rounds and a low bed prevent more falls than anything else."},
+ {p:3, d:"Ch 10 · Falls", t:"mc", q:"Which is a risk you can fix in two minutes?",
+  o:["Her poor balance","Her blood pressure medicine","The call light left across the room","Her dizziness on standing"], a:2,
+  e:"The room is what you control. The person's own risks need the nurse and the care plan."},
+ {p:3, d:"Ch 10 · Falls", t:"mc", q:"A resident is at high fall risk. What must be true when you leave the room?",
+  o:["The curtain is closed","The bed is low, wheels locked, call light in her hand","The television is off","The window is open"], a:1,
+  e:"These are the last four steps of care, and two of the six critical steps."},
+ {p:3, d:"Ch 10 · Falls", t:"mc", q:"A person starts to fall while you are walking with them. What do you do?",
+  o:["Grab their arm and pull them upright","Step in front and hold them up","Move behind or beside them and ease them to the floor","Step away so they do not pull you down"], a:2,
+  e:"Never catch, never step away. Ease them down and protect the head."},
+ {p:3, d:"Ch 10 · Falls", t:"mc", q:"After a fall, when may you help the person up?",
+  o:["As soon as they say they are fine","After the nurse has checked them","Once you have written the report","Never — they must stay on the floor all shift"], a:1,
+  e:"Lifting someone too early can turn a crack into a displaced fracture."},
+ {p:3, d:"Ch 10 · Falls", t:"mc", q:"Which footwear is safest?",
+  o:["Socks alone","Loose backless slippers","Non-slip shoes or slippers with a back","Bare feet"], a:2,
+  e:"Loose slippers and socks are two of the commonest causes of a fall."},
+ {p:3, d:"Ch 11 · Restraints", t:"mc", q:"Which of these is an environmental restraint?",
+  o:["A vest tied to the chair","A sedative given to keep a person quiet","Moving the walking frame out of reach","A blanket over the knees"], a:2,
+  e:"Taking away the means to move is a restraint, even though nothing touches the person."},
+ {p:3, d:"Ch 11 · Restraints", t:"mc", q:"Who can order a restraint?",
+  o:["The nursing assistant","The doctor, with a care plan","The family","Any senior staff member on duty"], a:1,
+  e:"It needs an order that names the type, the reason and the time, and it is reviewed."},
+ {p:3, d:"Ch 11 · Restraints", t:"mc", q:"How long must a restraint be released for, and how often?",
+  o:["5 minutes every hour","At least 10 minutes every 2 hours","15 minutes every 4 hours","Only at the end of the shift"], a:1,
+  e:"Release every 2 hours for at least 10 minutes — reposition, toilet, fluids, skin care, move the limbs."},
+ {p:3, d:"Ch 11 · Restraints", t:"mc", q:"You notice a restrained resident's hands are cold and pale. What do you do?",
+  o:["Cover them with a blanket and carry on","Loosen it a little and check at the end of the shift","Report it to the nurse immediately","Write it in the notes at the end of the shift"], a:2,
+  e:"Cold, pale or blue hands mean the circulation is cut off. Report at once."},
+ {p:3, d:"Ch 11 · Restraints", t:"mc", q:"Mr. Saleh keeps standing up in the lounge. What do you try FIRST?",
+  o:["Put a lap tray across his chair","Ask him why, and check for pain, toilet, hunger or thirst","Move him to a quieter room and lock the door","Ask the nurse for a sedative"], a:1,
+  e:"Almost every restraint request is an unanswered question about what the person is trying to do."},
+ {p:3, d:"Ch 11 · Restraints", t:"mc", q:"A restraint applied without an order is:",
+  o:["Acceptable if it keeps the person safe","False imprisonment","Acceptable if the family agrees","Acceptable if you record it"], a:1,
+  e:"It is a legal wrong, whoever agreed to it."},
+ {p:3, d:"Ch 29 · Mental health", t:"mc", q:"Which is a sign of depression rather than normal sadness?",
+  o:["Crying at a funeral","Two weeks of not eating, not sleeping and losing interest in everything","Missing a family member after a visit","Being quiet on one particular day"], a:1,
+  e:"Depression lasts, affects eating and sleeping, and takes away interest in everything."},
+ {p:3, d:"Ch 29 · Mental health", t:"mc", q:"A resident says people in the wall are talking about her. What is the BEST reply?",
+  o:["“There is nobody there, do not be silly.”","“Yes, I can hear them too.”","“I do not hear it, but I can see it frightens you. I will stay with you.”","“I will call the doctor to give you something.”"], a:2,
+  e:"Neither argue nor pretend. Acknowledge the feeling and stay."},
+ {p:3, d:"Ch 29 · Mental health", t:"mc", q:"Which is OUTSIDE the nursing assistant's role?",
+  o:["Reporting that a resident said she feels hopeless","Sitting and listening without judging","Telling the family you think he has depression","Keeping his routine and meals going"], a:2,
+  e:"Diagnosing, or telling anyone a diagnosis, is not the CNA role."},
+ {p:3, d:"Ch 29 · Mental health", t:"mc", q:"A resident says quietly that everyone would be better off without him. You should FIRST:",
+  o:["Finish your round and report at the end of the shift","Stay with him and tell the nurse immediately","Promise not to tell anyone so he keeps talking","Tell him not to speak like that"], a:1,
+  e:"Stay, do not promise secrecy, report immediately. Those three, in that order."},
+ {p:3, d:"Ch 30 · Dementia", t:"mc", q:"Which points to DELIRIUM rather than dementia?",
+  o:["Slowly worsening memory over three years","Confusion that started yesterday, with a hot skin","Needing help to dress for the past two years","Calling her daughter by her sister's name for months"], a:1,
+  e:"Sudden onset plus a physical sign. Report it the same shift."},
+ {p:3, d:"Ch 30 · Dementia", t:"mc", q:"In an older person, what is often the FIRST sign of a urine infection?",
+  o:["A high fever","New confusion","A rash","Weight gain"], a:1,
+  e:"Confusion often comes before any fever. This is why new confusion is always reported."},
+ {p:3, d:"Ch 30 · Dementia", t:"mc", q:"Which dementia is caused by small strokes?",
+  o:["Alzheimer disease","Vascular dementia","Lewy body dementia","Frontotemporal dementia"], a:1,
+  e:"Vascular dementia often changes in steps rather than smoothly."},
+ {p:3, d:"Ch 30 · Dementia", t:"mc", q:"How should you approach a person with dementia?",
+  o:["Quietly from behind so you do not startle them","From the front, at eye level, saying who you are","With several instructions at once to save time","By testing whether they remember you"], a:1,
+  e:"From the front, eye level, your name, one instruction, then wait."},
+ {p:3, d:"Ch 30 · Dementia", t:"mc", q:"A resident with dementia keeps asking the same question. Why?",
+  o:["She is being difficult","The answer does not stay, and she is anxious","She is testing you","She wants attention from the staff"], a:1,
+  e:"Answer calmly again. The anxiety is real even though the memory is not holding."},
+ {p:3, d:"Ch 30 · Dementia", t:"mc", q:"Mrs. Hala says “I want to go home”. What is the BEST reply?",
+  o:["“This IS your home now.”","“Tell me about your home.”","“You have lived here for two years, remember?”","“Your family does not want you there.”"], a:1,
+  e:"Answer the feeling, not the fact. Then change the activity."},
+ {p:4, c:"A", t:"mc", d:"Case A · A fall",
+  s:"<b>Case A.</b> At 02:10 you find Mrs. Ahmed, 76, sitting on the floor beside her bed. She is a moderate fall risk and walks with a stick and one assist. The bed is high, the call light is on the chair by the window, she is wearing socks, and the bathroom light is off. She says, “I just needed the toilet. Please do not tell anyone.”",
+  q:"A1. What do you do FIRST?",
+  o:["Help her back into bed quickly","Stay with her, do not move her, and call the nurse","Go and find the nurse","Write it in the notes before you forget"], a:1,
+  e:"Never move her and never leave her. She may be injured without knowing it."},
+ {p:4, c:"A", t:"mc", d:"Case A · A fall",
+  q:"A2. Which four things in the room made this fall likely?",
+  o:["The curtain, the window, the door, the chair","Bed high, call light out of reach, socks, no night light","Her age, her stick, her diagnosis, her medicine","The time of night and the staffing level"], a:1,
+  e:"All four are in the room, and all four could have been fixed in two minutes."},
+ {p:4, c:"A", t:"mc", d:"Case A · A fall",
+  q:"A3. She asks you not to tell anyone. What do you say?",
+  o:["“All right, this once.”","“I have to tell the nurse so we can check you are not hurt.”","“I will tell them it was your fault if you make me.”","“I will tell them tomorrow.”"], a:1,
+  e:"Never promise secrecy about a fall. Say it kindly, and say why."},
+ {p:4, c:"A", t:"mc", d:"Case A · A fall",
+  q:"A4. Which note is written correctly?",
+  o:["“02:10 Resident fell going to the toilet.”","“02:10 Resident was careless and ended up on the floor.”","“02:10 Found sitting on the floor beside the bed. States she was going to the toilet. No visible injury. Nurse informed 02:12.”","“02:10 Resident slipped on a wet floor.”"], a:2,
+  e:"You did not see it, so you write what you found — with the time, and only facts."},
+ {p:4, c:"B", t:"mc", d:"Case B · Dementia and restraint",
+  s:"<b>Case B.</b> Mr. Idris, 79, has vascular dementia and is a high fall risk. It is 16:30. He has been walking up and down the corridor for twenty minutes and will not sit. He is pulling at his trousers. A colleague says, “Put him in the chair with the table across it until dinner.” You notice his skin is hot and he has had nothing to drink since lunch.",
+  q:"B1. What is he most likely trying to tell you?",
+  o:["He is bored and wants attention","He needs the toilet, or he is uncomfortable","He is angry with the staff","He wants to go outside"], a:1,
+  e:"Pulling at clothing plus pacing is most often the toilet. Behaviour is communication."},
+ {p:4, c:"B", t:"mc", d:"Case B · Dementia and restraint",
+  q:"B2. Why is your colleague's suggestion wrong?",
+  o:["It would take too long to set up","A table he cannot remove is a physical restraint, and it needs an order","The chair is not comfortable enough","The family have not agreed to it"], a:1,
+  e:"A lap tray or table the person cannot remove is a restraint — whatever it is called."},
+ {p:4, c:"B", t:"mc", d:"Case B · Dementia and restraint",
+  q:"B3. What do the hot skin and no drink since lunch suggest?",
+  o:["Normal ageing","That he is too warmly dressed","Possible infection or dehydration — a physical cause of new restlessness","Nothing — he has dementia"], a:2,
+  e:"Sudden restlessness on top of dementia, with a physical sign, is delirium until proved otherwise."},
+ {p:4, c:"B", t:"mc", d:"Case B · Dementia and restraint",
+  q:"B4. What do you do in the next ten minutes?",
+  o:["Walk with him, offer the toilet and a drink, then report to the nurse","Sit him in the chair with the table and watch him","Tell him firmly to sit down","Leave him walking and report at the end of the shift"], a:0,
+  e:"Meet the need, stay safe, then report. No restraint is needed once the need is met."},
+ {p:4, c:"C", t:"mc", d:"Case C · Mental health",
+  s:"<b>Case C.</b> Mrs. Noor, 68, has had no diagnosed mental illness. Over the past week she has stopped going to the lounge, eaten almost nothing and stayed in bed. Today she says quietly, “Sometimes I think everyone would be better off without me.” Then she says, “Please do not tell the nurse.”",
+  q:"C1. What do you do FIRST?",
+  o:["Leave the room to find the nurse","Stay with her","Tell her she has a lot to live for","Write it in the notes at the end of the shift"], a:1,
+  e:"Stay with her. Everything else comes after that."},
+ {p:4, c:"C", t:"mc", d:"Case C · Mental health",
+  q:"C2. She asks you not to tell the nurse. What do you say?",
+  o:["“I promise I will not tell anyone.”","“I cannot keep this to myself, because I want you to be safe. I will tell the nurse and I will stay with you.”","“You should tell her yourself.”","“I will only tell her if you get worse.”"], a:1,
+  e:"Never promise secrecy. Say why you must tell, kindly and without argument."},
+ {p:4, c:"C", t:"mc", d:"Case C · Mental health",
+  q:"C3. Which report to the nurse is BEST?",
+  o:["“Nurse, Mrs. Noor is depressed.”","“Nurse, Mrs. Noor is a bit down today.”","“Nurse, Mrs. Noor said, ‘everyone would be better off without me.’ She has eaten almost nothing for a week and has stayed in bed. I am with her now — can you come?”","“Nurse, I think Mrs. Noor needs antidepressants.”"], a:2,
+  e:"Her exact words, the facts, and a clear request. No diagnosis and no treatment suggestion."},
+ {p:4, c:"D", t:"mc", d:"Case D · Delirium",
+  s:"<b>Case D.</b> Mrs. Hala, 84, has Alzheimer disease. For two years she has needed help to dress and often calls you by her daughter's name. This morning she does not know where she is, cannot stay awake through a sentence, has passed no urine since yesterday, and her skin is hot.",
+  q:"D1. Which facts are her usual dementia?",
+  o:["The drowsiness and the hot skin","Needing help to dress, and calling you by her daughter's name","Passing no urine since yesterday","All of them — she has dementia"], a:1,
+  e:"Those two have been true for two years. They are her baseline."},
+ {p:4, c:"D", t:"mc", d:"Case D · Delirium",
+  q:"D2. What do the new facts suggest?",
+  o:["Her dementia is getting worse","Delirium, probably from a urine infection or dehydration","Normal ageing","She did not sleep well"], a:1,
+  e:"Sudden change, drowsiness, no urine and hot skin. That is a physical cause until proved otherwise."},
+ {p:4, c:"D", t:"mc", d:"Case D · Delirium",
+  q:"D3. When do you report it?",
+  o:["At the end of the shift","Now","Tomorrow, if she is still like this","At the next care plan review"], a:1,
+  e:"Delirium is an emergency. It gets better if the cause is treated quickly."},
+ {p:4, c:"D", t:"mc", d:"Case D · Delirium",
+  q:"D4. What is the correct A of your SBAR?",
+  o:["“She has a urine infection.”","“She does not know where she is, cannot stay awake through a sentence, her skin is hot and she has passed no urine since yesterday.”","“She is much worse and I am very worried.”","“Her dementia has got worse overnight.”"], a:1,
+  e:"Observations and measurements only. The first option names an illness, which is not yours to name."},
+ {p:5, d:"SBAR", t:"order",
+  q:"Put the four parts of SBAR in the correct order.",
+  items:["Situation","Background","Assessment","Recommendation"],
+  e:"Situation, Background, Assessment, Recommendation — always in that order."},
+ {p:5, d:"Ch 9 · Fire", t:"order",
+  q:"Put RACE in the correct order.",
+  items:["Rescue anyone in immediate danger","Alarm — raise it and call for help","Contain — close doors and windows","Extinguish or Evacuate"],
+  e:"Rescue, Alarm, Contain, Extinguish or Evacuate."},
+ {p:5, d:"Ch 9 · Fire", t:"order",
+  q:"Put PASS in the correct order for using an extinguisher.",
+  items:["Pull the pin","Aim at the base of the fire","Squeeze the handle","Sweep side to side"],
+  e:"Pull, Aim, Squeeze, Sweep. Always aim at the base, never the flames."},
+ {p:5, d:"Ch 10 · Falls", t:"order",
+  q:"A person starts to fall. Put your actions in order.",
+  items:["Move behind or beside them, feet apart","Hold the gait belt or waist and bring them towards you","Let them slide down your leg to the floor, protecting the head","Stay with them and call the nurse"],
+  e:"Never catch them. Ease them down, protect the head, then stay and call."},
+ {p:5, d:"Ch 30 · Dementia", t:"order",
+  q:"Put these in order for approaching a person with dementia.",
+  items:["Come from the front and get to eye level","Say your name and her name","Give one short instruction","Wait and count to ten"],
+  e:"Front, eye level, names, one instruction — then wait. The waiting is the part students skip."},
+ {p:5, d:"Skills", t:"order",
+  q:"Put these in order for PUTTING ON PPE.",
+  items:["Hand hygiene","Gown","Mask","Eye protection","Gloves"],
+  e:"Gloves go on last because they are the most likely to be contaminated first."},
+ {p:5, d:"Skills", t:"order",
+  q:"Put these in order for TAKING OFF PPE.",
+  items:["Gloves","Eye protection","Gown","Mask","Hand hygiene"],
+  e:"Gloves are the dirtiest, so they come off first. Hand hygiene is always last."},
+ {p:5, d:"Ch 11 · Restraints", t:"match",
+  q:"Drag each example to the correct type of restraint.",
+  left:["Physical restraint","Chemical restraint","Environmental restraint","Not a restraint"],
+  items:["A vest the person cannot undo","A sedative given to keep someone quiet","The walking frame moved out of reach","A blanket over her knees because she is cold"],
+  e:"A restraint is anything the person cannot remove that limits movement. A blanket she can push off is not one."},
+ {p:5, d:"Ch 30 · Dementia", t:"match",
+  q:"Drag each description to the right condition.",
+  left:["Delirium","Dementia","Sundowning","Normal ageing"],
+  items:["Starts suddenly, and gets better when the cause is treated","Permanent brain damage, slowly getting worse","More confusion and restlessness in the late afternoon","Slower to learn new things, but memory works"],
+  e:"Delirium is sudden and reversible; dementia is slow and permanent; sundowning is a pattern within dementia."},
+ {p:5, d:"Week 3", t:"match",
+  q:"Drag the correct action to each situation.",
+  left:["A resident says she wants to die","You find a resident on the floor","A person with dementia asks for her dead mother","You are told to apply a restraint with no order"],
+  items:["Stay with her and tell the nurse immediately","Do not move them, stay, and call the nurse","Ask what her mother was like, then change the activity","Do not apply it, and ask the nurse for the order"],
+  e:"All four are the same principle: keep the person safe, do not act outside your role, and report."},
+];
+
+/* ══════════════════════ STATE ══════════════════════ */
+let ATTEMPTS = 0;
+try { ATTEMPTS = parseInt(localStorage.getItem("cna_wk3_attempts") || "0", 10) || 0; } catch(e) { ATTEMPTS = 0; }
+function bumpAttempt(){ ATTEMPTS++; try { localStorage.setItem("cna_wk3_attempts", String(ATTEMPTS)); } catch(e) {} }
+let SEL = null, DRAG = null;
+QUESTIONS.sort((a,b) => a.p - b.p);   // keep the five parts in order
+const S = { work:{}, name:"", email:"", idx:0, answers:new Array(QUESTIONS.length).fill(null), started:null, endsAt:null, timer:null, done:false };
+const $ = id => document.getElementById(id);
+const show = id => ["screen-lock","screen-home","screen-exam","screen-result"].forEach(s => $(s).classList.toggle("hidden", s !== id));
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const norm = s => String(s).toLowerCase().replace(/[^a-z0-9 ]/g,"").replace(/\s+/g," ").trim();
+
+/* ══════════════════════ SCREEN 0 · LOCK ══════════════════════ */
+function bootLock(){
+  const rel = new Date(CONFIG.releaseISO);
+  if (isNaN(rel) || Date.now() >= rel.getTime()) { buildReviewer(); show("screen-home"); return; }
+  $("lock-when").textContent = rel.toLocaleString("en-GB",{dateStyle:"full", timeStyle:"short"});
+  show("screen-lock");
+  const tick = () => {
+    let left = rel.getTime() - Date.now();
+    if (left <= 0) { clearInterval(iv); buildReviewer(); show("screen-home"); return; }
+    left = Math.floor(left/1000);
+    $("cd-h").textContent = String(Math.floor(left/3600)).padStart(2,"0");
+    $("cd-m").textContent = String(Math.floor(left%3600/60)).padStart(2,"0");
+    $("cd-s").textContent = String(left%60).padStart(2,"0");
+  };
+  const iv = setInterval(tick, 1000); tick();
+}
+
+/* ══════════════════════ SCREEN 1 ══════════════════════ */
+function buildReviewer(){
+  $("reviewer").innerHTML = REVIEWER.map((m,i) => `
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+      <button class="acc w-full flex items-center gap-3 text-left px-5 py-4 hover:bg-slate-50" data-i="${i}">
+        <span class="w-9 h-9 rounded-lg bg-teal-100 text-teal-700 grid place-items-center text-xs font-bold shrink-0">${i+1}</span>
+        <span class="flex-1 min-w-0">
+          <span class="block text-[11px] font-bold uppercase tracking-wider text-brand-600">${m.ch}</span>
+          <span class="block font-display font-bold text-ink-900">${m.title}</span>
+        </span>
+        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform" data-chev="${i}"></i>
+      </button>
+      <div class="hidden px-5 pb-5" data-panel="${i}">
+        <ul class="space-y-2 text-sm text-ink-800 leading-relaxed border-t border-slate-100 pt-4">
+          ${m.points.map(p => `<li class="flex gap-2"><i class="fa-solid fa-circle text-[5px] text-brand-400 mt-2"></i><span>${p}</span></li>`).join("")}
+        </ul>
+      </div>
+    </div>`).join("");
+  document.querySelectorAll(".acc").forEach(b => b.onclick = () => {
+    const i = b.dataset.i, p = document.querySelector(`[data-panel="${i}"]`), c = document.querySelector(`[data-chev="${i}"]`);
+    p.classList.toggle("hidden"); c.classList.toggle("rotate-180");
+  });
+}
+function attemptsLeft(){ return CONFIG.maxAttempts > 0 ? Math.max(0, CONFIG.maxAttempts - ATTEMPTS) : Infinity; }
+function renderAttempts(){
+  const el = $("attempts-left"); if (!el) return;
+  if (CONFIG.maxAttempts <= 0) { el.textContent = ""; return; }
+  const left = attemptsLeft();
+  if (left === 0) {
+    el.innerHTML = '<span class="text-brand-700">\u26a0\ufe0f ' +
+      'You have used all ' + CONFIG.maxAttempts + ' attempts. This quiz is now locked \u2014 please speak with your instructor.</span>';
+    $("warn-box").className = "bg-brand-100 border-2 border-brand-600 rounded-xl p-4";
+    const b = $("btn-start");
+    b.disabled = true;
+    b.innerHTML = '<i class="fa-solid fa-lock mr-1"></i> Locked \u2014 no attempts left';
+  } else {
+    el.innerHTML = 'Attempts used: <b>' + ATTEMPTS + ' of ' + CONFIG.maxAttempts + '</b> &nbsp;·&nbsp; ' +
+      (left === 1 ? '<span class="text-brand-700"><b>This is your LAST attempt.</b></span>'
+                  : '<b>' + left + '</b> left');
+  }
+}
+function validReg(){
+  const n = $("reg-name").value.trim(), e = $("reg-email").value.trim();
+  const ok = n.length >= 3 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
+  $("btn-start").disabled = !ok || attemptsLeft() === 0;
+  const msg = $("reg-msg");
+  if (e && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)) { msg.textContent = "Please write a complete email address."; msg.classList.remove("hidden"); }
+  else msg.classList.add("hidden");
+}
+$("reg-name").addEventListener("input", validReg);
+$("reg-email").addEventListener("input", validReg);
+renderAttempts();
+
+/* ══════════════════════ SCREEN 2 · EXAM ══════════════════════ */
+$("btn-start").onclick = () => {
+  if (CONFIG.maxAttempts > 0 && ATTEMPTS >= CONFIG.maxAttempts) {
+    alert("You have used all " + CONFIG.maxAttempts + " attempts for this exam. Please speak with your instructor.");
+    return;
+  }
+  const left = attemptsLeft();
+  if (CONFIG.maxAttempts > 0 && !confirm(
+      "\u26a0\ufe0f  This uses one of your " + CONFIG.maxAttempts + " attempts.\n\n" +
+      "You have " + left + " left" + (left === 1 ? " \u2014 this is your LAST one." : ".") + "\n" +
+      "The timer starts now and does not stop, even if you close the page.\n\nStart the exam?")) return;
+  bumpAttempt();
+  S.name = $("reg-name").value.trim(); S.email = $("reg-email").value.trim();
+  S.started = new Date(); S.endsAt = Date.now() + CONFIG.minutes*60000; S.idx = 0; S.done = false;
+  S.answers = new Array(QUESTIONS.length).fill(null); S.work = {}; SEL = null; DRAG = null;
+  $("exam-name").textContent = S.name;
+  $("avatar").textContent = S.name.split(/\s+/).map(w => w[0]).slice(0,2).join("").toUpperCase();
+  show("screen-exam"); window.scrollTo(0,0);
+  renderQ(); renderPalette(); updateBar();
+  S.timer = setInterval(tickClock, 250); tickClock();
+};
+function tickClock(){
+  let left = Math.max(0, S.endsAt - Date.now());
+  const s = Math.floor(left/1000);
+  $("clock").textContent = String(Math.floor(s/60)).padStart(2,"0") + ":" + String(s%60).padStart(2,"0");
+  $("clock").classList.toggle("text-brand-600", s <= 300);
+  if (left <= 0 && !S.done) finish(true);
+}
+function renderQ(){
+  const i = S.idx, q = QUESTIONS[i], val = S.answers[i], P = partOf(q.p);
+  const first = QUESTIONS.findIndex(x => x.p === q.p);
+  const numInPart = i - first + 1, totalInPart = QUESTIONS.filter(x => x.p === q.p).length;
+  let input = "";
+  if (q.t === "mc" || q.t === "tf") {
+    const cols = q.t === "tf" ? "sm:grid-cols-2" : "";
+    input = `<div class="grid ${cols} gap-2">` + q.o.map((o,k) => `
+      <label class="flex items-start gap-3 rounded-xl border ${val===k?'border-brand-500 bg-brand-50':'border-slate-200 bg-white'} px-4 py-3 cursor-pointer hover:border-brand-300">
+        <input type="radio" name="opt" value="${k}" ${val===k?"checked":""} class="mt-1 accent-pink-500">
+        <span class="text-sm">${esc(o)}</span></label>`).join("") + `</div>`;
+  } else if (q.t === "order" || q.t === "match") {
+    if (!q._bank) { q._bank = q.items.map((_,k)=>k); let sd = i*97+13;
+      for (let k=q._bank.length-1;k>0;k--){ sd=(sd*1103515245+12345)&0x7fffffff; const j2=sd%(k+1); [q._bank[k],q._bank[j2]]=[q._bank[j2],q._bank[k]]; } }
+    const placed = Array.isArray(S.work[i]) ? S.work[i].slice() : new Array(q.items.length).fill(null);
+    const used = placed.filter(x => x !== null);
+    const labels = q.t === "order" ? q.items.map((_,k)=>"Step " + (k+1)) : q.left;
+    const chip = (k, inSlot) => `<span class="chip inline-block rounded-lg ${inSlot?'bg-brand-500 text-white':'bg-teal-500 text-white'} text-sm font-semibold px-3 py-2" draggable="true" data-k="${k}">${esc(q.items[k])}</span>`;
+    const free = q._bank.filter(k => !used.includes(k));
+    input = `
+      <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Cards</p>
+      <div id="bank" class="flex flex-wrap gap-2 mb-5 min-h-[3.25rem] p-3 rounded-xl border-2 border-dashed border-slate-300 bg-slate-50">
+        ${free.length ? free.map(k=>chip(k,false)).join("") : '<span class="text-xs text-slate-400 self-center">All cards are placed. Tap a card below to send it back.</span>'}
+      </div>
+      <div class="space-y-2">
+        ${labels.map((lb,sl)=>`
+          <div class="flex items-stretch gap-2">
+            <div class="w-24 sm:w-44 shrink-0 rounded-lg bg-teal-100 text-teal-800 text-xs font-bold px-3 py-3 flex items-center">${esc(lb)}</div>
+            <div class="slot flex-1 rounded-lg border-2 border-dashed ${placed[sl]!==null?'border-brand-400 bg-brand-50':'border-slate-300 bg-white'} px-3 py-2.5 min-h-[3.25rem] flex items-center" data-s="${sl}">
+              ${placed[sl]!==null ? chip(placed[sl],true) : '<span class="text-xs text-slate-400">Drop a card here</span>'}
+            </div>
+          </div>`).join("")}
+      </div>`;
+  } else if (q.t === "select") {
+    input = `<select id="sel" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-brand-400 outline-none">
+      <option value="">— Choose your answer —</option>
+      ${q.o.map((o,k) => `<option value="${k}" ${val===k?"selected":""}>${esc(o)}</option>`).join("")}</select>`;
+  } else {
+    input = `<input id="txt" type="text" value="${val?esc(val):""}" placeholder="Write the word or term"
+      class="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm focus:ring-2 focus:ring-brand-400 outline-none">
+      <p class="text-xs text-slate-500 mt-2">One word or a short phrase. Capital letters do not matter.</p>`;
+  }
+  const caseBox = q.s ? `<div class="bg-teal-50 border border-teal-300 rounded-xl p-4 text-sm leading-relaxed mb-4">${q.s}</div>` : "";
+  $("qcard").innerHTML = `
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+      <span class="text-xs font-bold uppercase tracking-wider text-white bg-ink-900 rounded-full px-3 py-1">${esc(P.name)}</span>
+      <span class="text-xs text-slate-500 font-semibold">Item ${i+1} of ${QUESTIONS.length} · ${numInPart} of ${totalInPart} in this part</span>
+    </div>
+    <p class="text-[11px] text-slate-500 mb-4">${esc(P.info)}</p>
+    ${caseBox}
+    <div class="mb-3"><span class="text-[10px] font-bold uppercase tracking-wider text-teal-700 bg-teal-100 rounded-full px-2.5 py-1">${esc(q.d)}</span></div>
+    <p class="font-display text-lg sm:text-xl font-bold text-ink-900 leading-snug mb-5">${esc(q.q)}</p>
+    ${input}`;
+  if (q.t === "mc" || q.t === "tf") document.querySelectorAll('input[name="opt"]').forEach(r => r.onchange = e => save(+e.target.value));
+  if (q.t === "select") $("sel").onchange = e => save(e.target.value === "" ? null : +e.target.value);
+  if (q.t === "fill" || q.t === "concept") $("txt").oninput = e => save(e.target.value.trim() || null);
+  if (q.t === "order" || q.t === "match") {
+    const total = q.items.length;
+    const cur = () => Array.isArray(S.work[i]) ? S.work[i].slice() : new Array(total).fill(null);
+    const commit = arr => { S.work[i] = arr; save(arr.every(x => x !== null) ? arr.slice() : null); renderQ(); renderPalette(); };
+    const place = (k, sl) => { const a = cur(); const old = a.indexOf(k); if (old >= 0) a[old] = null; a[sl] = k; commit(a); };
+    const unplace = sl => { const a = cur(); a[sl] = null; commit(a); };
+    document.querySelectorAll("#qcard .chip").forEach(c => {
+      c.addEventListener("dragstart", e => { e.dataTransfer.setData("text/plain", c.dataset.k); DRAG = +c.dataset.k; });
+      c.onclick = e => {
+        e.stopPropagation();
+        const inSlot = c.closest(".slot");
+        if (inSlot) { unplace(+inSlot.dataset.s); return; }
+        if (SEL === +c.dataset.k) { SEL = null; c.classList.remove("sel"); }
+        else { SEL = +c.dataset.k; document.querySelectorAll("#qcard .chip").forEach(x=>x.classList.remove("sel")); c.classList.add("sel"); }
+      };
+    });
+    document.querySelectorAll("#qcard .slot").forEach(sl => {
+      sl.addEventListener("dragover", e => { e.preventDefault(); sl.classList.add("over"); });
+      sl.addEventListener("dragleave", () => sl.classList.remove("over"));
+      sl.addEventListener("drop", e => { e.preventDefault(); sl.classList.remove("over");
+        const k = DRAG !== null ? DRAG : +e.dataTransfer.getData("text/plain"); DRAG = null;
+        if (!isNaN(k)) place(k, +sl.dataset.s); });
+      sl.onclick = () => { if (SEL !== null) { const k = SEL; SEL = null; place(k, +sl.dataset.s); } };
+    });
+    const bank = document.getElementById("bank");
+    if (bank) {
+      bank.addEventListener("dragover", e => e.preventDefault());
+      bank.addEventListener("drop", e => { e.preventDefault();
+        const k = DRAG !== null ? DRAG : +e.dataTransfer.getData("text/plain"); DRAG = null;
+        const a = cur(); const old = a.indexOf(k); if (old >= 0) { a[old] = null; commit(a); } });
+    }
+  }
+  $("btn-prev").disabled = i === 0;
+  $("btn-prev").classList.toggle("opacity-40", i === 0);
+  $("btn-next").innerHTML = i === QUESTIONS.length-1 ? 'Review &amp; submit <i class="fa-solid fa-flag-checkered ml-1"></i>' : 'Next <i class="fa-solid fa-arrow-right ml-1"></i>';
+}
+function save(v){ S.answers[S.idx] = v; const t = QUESTIONS[S.idx].t; if (t === "mc" || t === "tf") renderQ(); renderPalette(); updateBar(); }
+function renderPalette(){
+  let html = "";
+  PARTS.forEach(P => {
+    const idx = QUESTIONS.map((q,i) => q.p === P.n ? i : -1).filter(i => i >= 0);
+    if (!idx.length) return;
+    html += `<p class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mt-3 mb-1.5 first:mt-0">${esc(P.name)}</p><div class="grid grid-cols-6 gap-2">`;
+    idx.forEach(i => {
+      const done = S.answers[i] !== null && S.answers[i] !== "";
+      const cls = i === S.idx ? "bg-brand-500 text-white" : done ? "bg-teal-500 text-white" : "bg-slate-200 text-slate-600 hover:bg-slate-300";
+      html += `<button class="pal-btn pal h-9 rounded-lg text-xs font-bold ${cls}" data-i="${i}">${i+1}</button>`;
+    });
+    html += `</div>`;
+  });
+  $("palette").innerHTML = html;
+  document.querySelectorAll(".pal").forEach(b => b.onclick = () => { S.idx = +b.dataset.i; renderQ(); renderPalette(); window.scrollTo({top:0,behavior:"smooth"}); });
+}
+function updateBar(){
+  const done = S.answers.filter(a => a !== null && a !== "").length;
+  $("bar").style.width = Math.round(done/QUESTIONS.length*100) + "%";
+  $("progress-txt").textContent = `${done} of ${QUESTIONS.length} saved`;
+}
+$("btn-next").onclick = () => {
+  if (S.idx < QUESTIONS.length-1) { S.idx++; renderQ(); renderPalette(); window.scrollTo({top:0,behavior:"smooth"}); }
+  else confirmSubmit();
+};
+$("btn-prev").onclick = () => { if (S.idx > 0) { S.idx--; renderQ(); renderPalette(); window.scrollTo({top:0,behavior:"smooth"}); } };
+$("btn-submit").onclick = confirmSubmit;
+function confirmSubmit(){
+  const blank = S.answers.filter(a => a === null || a === "").length;
+  const msg = blank ? `You have ${blank} item(s) with no answer. Submit anyway?` : "Submit your exam now?";
+  if (window.confirm(msg)) finish(false);
+}
+
+/* ══════════════════════ GRADING ══════════════════════ */
+function isCorrect(q, ans){
+  if (ans === null || ans === "") return false;
+  if (q.t === "mc" || q.t === "select" || q.t === "tf") return ans === q.a;
+  if (q.t === "order" || q.t === "match") return Array.isArray(ans) && ans.length === q.items.length && ans.every((v,k) => v === k);
+  return q.a.some(acc => norm(ans) === norm(acc) || norm(ans).includes(norm(acc)));
+}
+function answerText(q, ans){
+  if (ans === null || ans === "") return "No answer";
+  if (q.t === "order" || q.t === "match") {
+    const labels = q.t === "order" ? ans.map((_,k)=>(k+1)+".") : q.left.map(l=>l+" →");
+    return ans.map((v,k) => labels[k] + " " + (v===null ? "—" : q.items[v])).join("   ");
+  }
+  return (q.t === "mc" || q.t === "select" || q.t === "tf") ? q.o[ans] : String(ans);
+}
+function correctText(q){
+  if (q.t === "order") return q.items.map((t,k) => (k+1)+". "+t).join("   ");
+  if (q.t === "match") return q.items.map((t,k) => q.left[k]+" → "+t).join("   ");
+  return (q.t === "mc" || q.t === "select" || q.t === "tf") ? q.o[q.a] : q.a[0];
+}
+function partOf(n){ return PARTS.find(p => p.n === n); }
+function partScores(){ return PARTS.map(p => { const idx = QUESTIONS.map((q,i)=>q.p===p.n?i:-1).filter(i=>i>=0); const got = idx.filter(i => isCorrect(QUESTIONS[i], S.answers[i])).length; return { part:p, got, total: idx.length }; }); }
+
+function finish(auto){
+  S.done = true; clearInterval(S.timer);
+  const raw = QUESTIONS.reduce((n,q,i) => n + (isCorrect(q, S.answers[i]) ? 1 : 0), 0);
+  const pct = Math.round(raw / QUESTIONS.length * 1000)/10;
+  const pass = pct >= CONFIG.passPct;
+  const mins = Math.max(1, Math.round((Date.now() - S.started.getTime())/60000));
+  const when = new Date().toLocaleString("en-GB",{dateStyle:"medium", timeStyle:"short"});
+
+  $("score-card").innerHTML = `
+    <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+      <div class="text-center sm:text-left">
+        <p class="text-xs uppercase tracking-widest text-slate-400">Raw score</p>
+        <p class="font-display text-5xl font-bold">${raw}<span class="text-2xl text-slate-400">/${QUESTIONS.length}</span></p>
+        <p class="text-3xl font-bold ${pass?'text-teal-300':'text-brand-400'} mt-1">${pct}%</p>
+      </div>
+      <div class="flex-1">
+        <span class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-bold ${pass?'bg-teal-500 text-white':'bg-brand-500 text-white'}">
+          <i class="fa-solid ${pass?'fa-circle-check':'fa-circle-exclamation'}"></i> WRITTEN EXAM: ${pass?'PASS':'FAIL'} · required ${CONFIG.passPct}% (${Math.ceil(CONFIG.passPct/100*QUESTIONS.length)} of ${QUESTIONS.length})
+        </span>
+        <dl class="grid grid-cols-2 gap-x-6 gap-y-2 mt-4 text-sm">
+          <div><dt class="text-slate-400 text-xs uppercase tracking-wider">Candidate</dt><dd class="font-semibold">${esc(S.name)}</dd></div>
+          <div><dt class="text-slate-400 text-xs uppercase tracking-wider">Email</dt><dd class="font-semibold truncate">${esc(S.email)}</dd></div>
+          <div><dt class="text-slate-400 text-xs uppercase tracking-wider">Time used</dt><dd class="font-semibold">${mins} min${auto?' (time ended)':''}</dd></div>
+          <div><dt class="text-slate-400 text-xs uppercase tracking-wider">Submitted</dt><dd class="font-semibold">${when}</dd></div>
+        </dl>
+        <p class="text-[10px] uppercase tracking-widest text-slate-400 mt-5 mb-2">Performance by content area</p>
+        <div class="grid sm:grid-cols-2 gap-2">
+          ${partScores().map(x => `<div class="flex items-center justify-between bg-white/5 rounded-lg px-3 py-2 text-sm">
+            <span class="text-slate-200">${x.part.name}</span>
+            <span class="font-bold ${x.got/x.total >= CONFIG.passPct/100 ? 'text-teal-300' : 'text-brand-300'}">${x.got}/${x.total}</span></div>`).join("")}
+        </div>
+        <div class="mt-4 bg-white/5 border border-white/10 rounded-lg px-3 py-2.5 text-xs text-slate-200 leading-relaxed">
+          <b class="text-white">Skills evaluation:</b> recorded separately by the instructor. Every skill must be performed correctly, including hand hygiene, identifying the person, consent, privacy and the safe ending steps. Both parts must be passed.
+          <br><span class="text-slate-400">${CONFIG.maxAttempts > 0 ? `Attempt ${ATTEMPTS} of ${CONFIG.maxAttempts}.` : `This was attempt ${ATTEMPTS}. You may take the quiz again as many times as you need.`}</span>
+        </div>
+        <p class="text-xs text-slate-400 mt-3">${CONFIG.title} · ${CONFIG.instructor} · Your result has been sent to your instructor.</p>
+      </div>
+    </div>`;
+
+  // The answer key is NOT shown here. Students may retake the quiz, so the
+  // correct answers are released separately by the instructor.
+  const weakest = partScores().filter(x => x.total)
+      .sort((a,b) => (a.got/a.total) - (b.got/b.total)).slice(0,2)
+      .map(x => x.part.name.replace(/^Part \d+ · /, ""));
+  const rev = `
+    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 print-block">
+      <h3 class="font-display text-lg font-bold text-ink-900 mb-2">
+        <i class="fa-solid fa-lock text-brand-400 mr-1"></i> The answer key is not shown here</h3>
+      <p class="text-sm text-ink-800 leading-relaxed">You can take this quiz again, so the correct answers are not
+      displayed. Your instructor will send the answer key after the last attempt. Turn in your screenshot on Google Classroom, or send it to Ms. Maria.</p>
+      <p class="text-sm text-ink-800 leading-relaxed mt-3">Your score for each part is on the card above — screenshot it before you close this page.
+      ${weakest.length ? `Study ${weakest.map(w => "<b>"+esc(w)+"</b>").join(" and ")} again before your next attempt.` : ""}</p>
+      <p class="text-sm text-slate-600 bg-slate-50 rounded-lg px-3 py-2 mt-4 leading-relaxed">
+        <i class="fa-solid fa-book-open text-brand-400 mr-1"></i>
+        Everything in this quiz comes from your Week 3 handout: SBAR · the older person · safety ·
+        preventing falls · restraints · mental health · confusion and dementia.</p>
+    </div>`;
+  $("review").innerHTML = rev;
+
+  show("screen-result"); window.scrollTo(0,0);
+  sendResult({ raw, pct, pass, mins, when });
+}
+
+/* ══════════════════════ EMAIL (FormSubmit AJAX) ══════════════════════ */
+function sendResult(r){
+  const wrong = QUESTIONS.map((q,i) => isCorrect(q, S.answers[i]) ? null : `#${i+1} (${q.d})`).filter(Boolean).join(", ") || "none";
+  const payload = {
+    _subject: `CNA Week 3 Quiz — ${S.name} — ${r.pct}% (${r.pass ? "PASS" : "FAIL"})`,
+    Candidate: S.name, Email: S.email, Exam: CONFIG.title,
+    Score: `${r.raw}/${QUESTIONS.length}`, Percentage: `${r.pct}%`,
+    Result: r.pass ? "PASS" : "FAIL", Benchmark: `${CONFIG.passPct}%`,
+    Duration: `${r.mins} minutes`, Attempt: CONFIG.maxAttempts > 0 ? `${ATTEMPTS} of ${CONFIG.maxAttempts}` : `${ATTEMPTS}`, Submitted: r.when,
+    "Part scores": partScores().map(x => `${x.part.name}: ${x.got}/${x.total}`).join(" | "),
+    "Items missed": wrong
+  };
+  $("mail-status").textContent = "Sending your result to your instructor…";
+  fetch("https://formsubmit.co/ajax/" + encodeURIComponent(CONFIG.email), {
+    method:"POST", headers:{ "Content-Type":"application/json", "Accept":"application/json" },
+    body: JSON.stringify(payload)
+  }).then(res => res.json())
+    .then(() => { $("mail-status").textContent = "Result sent to your instructor."; })
+    .catch(() => { $("mail-status").textContent = "Result could not be emailed — please show this page to your instructor."; });
+}
+
+/* ══════════════════════ RETAKE ══════════════════════ */
+$("btn-retake").onclick = () => {
+  if (CONFIG.maxAttempts > 0 && ATTEMPTS >= CONFIG.maxAttempts) { alert("You have used all " + CONFIG.maxAttempts + " attempts. This quiz is now locked. Please speak with your instructor."); show("screen-home"); renderAttempts(); return; }
+  S.answers = new Array(QUESTIONS.length).fill(null); S.work = {}; SEL = null; DRAG = null; S.idx = 0; S.done = false;
+  $("mail-status").textContent = "";
+  show("screen-home"); window.scrollTo(0,0); renderAttempts(); validReg();
+};
+
+/* ══════════════════════ GUARD & BOOT ══════════════════════ */
+window.addEventListener("beforeunload", e => { if (!S.done && S.started) { e.preventDefault(); e.returnValue = ""; } });
+bootLock(); validReg();
+</script>
+</body>
+</html>
